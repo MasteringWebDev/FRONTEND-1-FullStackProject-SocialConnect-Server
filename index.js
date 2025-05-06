@@ -10,7 +10,7 @@ import postRoutes from './routes/post.js'
 
 const app = express()
 app.use(cors({
-  origin: 'http://localhost:5173'
+  origin: 'https://social-connect-client.netlify.app'
 }))
 app.use(bodyParser.json())
 app.use(express.static('public'))
@@ -27,6 +27,6 @@ app.get('/', (req, res) => {
 
 app.listen(process.env.PORT, () => {
   mongoose.connect(process.env.MONGODB_URL)
-    .then(() => console.log(`Server is running on http://localhost:${process.env.PORT}`))
+    .then(() => console.log('Server is running:)'))
     .catch((error) => console.log(error))
 })
